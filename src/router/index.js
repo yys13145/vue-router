@@ -7,6 +7,8 @@ import weather from '../views/weather.vue'
 import report from '../views/report.vue'
 import video from '../views/video.vue'
 import audio from '../views/audio.vue'
+import nav from '../views/nav.vue'
+
 Vue.use(VueRouter)
 
   const routes = [
@@ -16,8 +18,13 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path: '/404',
+    redirect: '/'
+  },
+  {
     path: '/me', 
     name: 'me',
+    alias: '/self',
     component: me
   },
   {
